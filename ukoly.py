@@ -55,7 +55,7 @@ FILE_PATH = "filtered.txt"
 threshold_filter(SOURCE_PATH, FILE_PATH, 4)
 
 
-def copy_file(source_path, output_path)
+def copy_file(source_path, output_path):
     with (open(source_path, "r") as source_file,
           open(output_path, "w") as output_file):
         output_file.write(source_file.read())
@@ -63,4 +63,19 @@ def copy_file(source_path, output_path)
 SOURCE_PATH = "data.txt"
 FILE_PATH = "copy.txt"
 
-threshold_filter(SOURCE_PATH, FILE_PATH)
+copy_file(SOURCE_PATH, FILE_PATH)
+
+def reverse_file(source_path, output_path):
+    with (open(source_path, "r") as source_file,
+          open(output_path, "w") as output_file):
+        lines = source_file.readlines()
+        lines.reverse()
+        lines[0] += "\n"
+        lines [-1] = lines [-1][:-1]
+        output_file.writelines(lines)
+
+
+SOURCE_PATH = "data2.txt"
+FILE_PATH = "copy.txt"
+
+reverse_file(SOURCE_PATH, FILE_PATH)
