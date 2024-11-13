@@ -130,7 +130,7 @@ def list_to_file(output_path, data_list):
         file.writelines(my_data)
 
 
-Sdef reverse_list_to_file(output_path, data_list):
+def reverse_list_to_file(output_path, data_list):
     my_data = []
     for line in data_list:
         if line[-1] == "\n":
@@ -142,6 +142,20 @@ Sdef reverse_list_to_file(output_path, data_list):
 
     with open(output_path, "w") as file:
         file.writelines(my_data)
+
+
+def count_chars(path):
+    with open(path, "r") as source_file:
+        data = source_file.read()
+
+    return len(data)
+
+
+def count_lines(path):
+    with open(path, "r") as source_file:
+        data = source_file.readlines()
+
+    return len(data)
 
 
 SOURCE_PATH = "data.txt"
