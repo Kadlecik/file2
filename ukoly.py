@@ -86,11 +86,15 @@ reverse_file(SOURCE_PATH, FILE_PATH)
 
 def find_word(source_path, character):
     with (open(source_path, "r") as source_file:
-        data_lines = source.file.read()
+        data_lines = source.file.readlines()
 
 
     counter = 0
-    for line in data_lines
+    for line in data_lines:
+        for word in line.split():
+
+
+
 
 
 count = first_letter_counter(source_path)
