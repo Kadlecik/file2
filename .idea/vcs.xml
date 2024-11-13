@@ -2,5 +2,11 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../lekce/školení Python/Github/Git_Python" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../lekce/školení Python/Github/HW" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../lekce/školení Python/Github/files" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../lekce/školení Python/Github/first-repo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../lekce/školení Python/Github/first_repo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../lekce/školení Python/Github/second_repo" vcs="Git" />
   </component>
 </project>
