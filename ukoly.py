@@ -116,3 +116,29 @@ count = first_letter_counter(SOURCE_PATH, "a")
 print(count)
 
 censore_file(SOURCE_PATH, "cenzura.txt", "a", "!!!!!!!!")
+
+
+def list_to_file(output_path, data_list):
+    my_data = []
+    for line in data_list:
+        if line[-1] == "\n":
+            my_data.append(line)
+        else:
+            my_data.append(f"{line}\n")
+
+    with open(output_path, "w") as file:
+        file.writelines(my_data)
+
+
+SOURCE_PATH = "data.txt"
+FILE_PATH = "copy.txt"
+
+#threshold_filter(SOURCE_PATH, FILE_PATH, 4)
+#reverse_file(SOURCE_PATH, FILE_PATH)
+#count = first_letter_counter(SOURCE_PATH, "a")
+#print(count)
+#censore_file(SOURCE_PATH, "cenzura.txt", "a", "!!!!!!!!")
+
+
+data = ["ahoj","mozno\n","riadok"]
+list_to_file("task7.txt", data)
