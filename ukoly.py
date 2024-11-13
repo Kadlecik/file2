@@ -172,3 +172,5 @@ data = ["ahoj","mozno\n","riadok"]
 reverse_list_to_file("task8.txt", data)
 
 
+
+
