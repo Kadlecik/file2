@@ -71,11 +71,13 @@ def reverse_file(source_path, output_path):
         lines = source_file.readlines()
         lines.reverse()
         lines[0] += "\n"
-        lines [-1] = lines [-1][:-1]
+        lines[-1] = lines[-1][:-1]
         output_file.writelines(lines)
+
 
 
 SOURCE_PATH = "data2.txt"
 FILE_PATH = "copy.txt"
 
+#threshold_filter(SOURCE_PATH, FILE_PATH, 4)
 reverse_file(SOURCE_PATH, FILE_PATH)
