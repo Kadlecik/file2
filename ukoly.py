@@ -84,17 +84,25 @@ reverse_file(SOURCE_PATH, FILE_PATH)
 
 
 
-def find_word(source_path, character):
-    with (open(source_path, "r") as source_file:
-        data_lines = source.file.readlines()
-
+def first_letter_counter(source_path, character):
+    with open(source_path, "r") as source_file:
+        data_lines = source_file.readlines()
 
     counter = 0
     for line in data_lines:
         for word in line.split():
+            if word[0] == character:
+                counter += 1
+
+    return counter
 
 
 
 
+SOURCE_PATH = "data.txt"
+FILE_PATH = "copy.txt"
 
-count = first_letter_counter(source_path)
+#threshold_filter(SOURCE_PATH, FILE_PATH, 4)
+#reverse_file(SOURCE_PATH, FILE_PATH)
+count = first_letter_counter(SOURCE_PATH, "a")
+print(count)
