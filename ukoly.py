@@ -82,3 +82,25 @@ FILE_PATH = "copy.txt"
 #threshold_filter(SOURCE_PATH, FILE_PATH, 4)
 reverse_file(SOURCE_PATH, FILE_PATH)
 
+
+
+def find_word(source_path, character):
+    with (open(source_path, "r") as source_file,
+          open(output_path, "w") as output_file,):
+        text = source_file.read()
+        words = text.split()
+
+        slova = text.split()
+        pocet_slov = sum(1 for slovo in slova if slovo.startswith(output_path))
+
+        porovnavani = [word for word in words if word] if word.lower(). startswith(pismeno)
+
+        count = len(porovnavani)
+
+        output_file.write(f"počet slov začínajících na {písmeno} : {count}\n")
+
+        output_file.write("slova:\n" + "\n".join(porovnavani))
+
+print(f"výsledky byly zapsány do {output_path}")
+
+
