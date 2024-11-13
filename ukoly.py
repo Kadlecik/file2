@@ -55,3 +55,12 @@ FILE_PATH = "filtered.txt"
 threshold_filter(SOURCE_PATH, FILE_PATH, 4)
 
 
+def copy_file(source_path, output_path)
+    with (open(source_path, "r") as source_file,
+          open(output_path, "w") as output_file):
+        output_file.write(source_file.read())
+
+SOURCE_PATH = "data.txt"
+FILE_PATH = "copy.txt"
+
+threshold_filter(SOURCE_PATH, FILE_PATH)
