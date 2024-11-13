@@ -97,6 +97,14 @@ def first_letter_counter(source_path, character):
     return counter
 
 
+def censore_file(source_path, output_path, old, new):
+    with open(source_path, "r") as source_file:
+        data = source_file.read()
+
+    new_data = data.replace(old, new)
+
+    with open(output_path, "w") as file:
+        file.write(new_data)
 
 
 SOURCE_PATH = "data.txt"
@@ -106,3 +114,5 @@ FILE_PATH = "copy.txt"
 #reverse_file(SOURCE_PATH, FILE_PATH)
 count = first_letter_counter(SOURCE_PATH, "a")
 print(count)
+
+censore_file(SOURCE_PATH, "cenzura.txt", "a", "!!!!!!!!")
