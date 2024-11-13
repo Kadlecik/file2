@@ -130,6 +130,20 @@ def list_to_file(output_path, data_list):
         file.writelines(my_data)
 
 
+Sdef reverse_list_to_file(output_path, data_list):
+    my_data = []
+    for line in data_list:
+        if line[-1] == "\n":
+            my_data.append(line)
+        else:
+            my_data.append(f"{line}\n")
+
+    my_data.reverse()
+
+    with open(output_path, "w") as file:
+        file.writelines(my_data)
+
+
 SOURCE_PATH = "data.txt"
 FILE_PATH = "copy.txt"
 
@@ -141,4 +155,6 @@ FILE_PATH = "copy.txt"
 
 
 data = ["ahoj","mozno\n","riadok"]
-list_to_file("task7.txt", data)
+reverse_list_to_file("task8.txt", data)
+
+
