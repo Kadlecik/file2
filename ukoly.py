@@ -33,6 +33,21 @@ def threshold_filter(source_path, output_path, threshold):
     f.close()
 
 
+def threshold_filter2(source_path, output_path, threshold):
+    with (open(source_path, "r") as source_file,
+          open(output_path, "w") as output_file):
+        data = source_file.read()
+
+        output_data = ""
+        for line in data.split("\n"):
+            for word in line.split():
+                if len(word) > threshold:
+                    output_data += f"{word}\n"
+
+        output_file.write(output_data)
+
+
+
 
 SOURCE_PATH = "data.txt"
 FILE_PATH = "filtered.txt"
